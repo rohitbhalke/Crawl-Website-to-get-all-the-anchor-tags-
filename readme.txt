@@ -1,7 +1,11 @@
 
 1) Task is written in task.txt.
 2) Pull this project and run npm install, it will install all the dependencies required.
-3) Now run the project by node bin/www
+3) Now run the project by node bin/www limit='the depth' (ex : limit=3). By default the depth is set to 2 if not provided.
+   (
+    Depth 1 is -- Scrape medium.com and get all the hyperlinks available
+    Depth 2 is -- Scrape medium.com and get all the hyperlinks available, scrape all the hyperlinks and get further more hyperlinks
+    )
 4) Now this will scrape medium.com and gets all the link on this page.
 5) I have used async.js and limited the parallel requests to 5 using async.q.
 6) Once it crawls 'medium.com', i have used cheerio to find all the anchor tags from the html response.
